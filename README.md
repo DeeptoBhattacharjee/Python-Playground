@@ -13,3 +13,16 @@ The Codes in Python Programming required for the understanding the Entry Level P
 `Question` Write a program to find out whether an user input number is odd number or even number.
 
 `Code` [Source Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Entry-Level%20Programs/OddOrEven.py)
+
+`Output`
+```
+===Input===
+Enter a Number : 5
+===Output===
+5 is an Odd Number
+
+===Input===
+Enter a Number : 2
+===Output===
+2 is an Even Number
+```
