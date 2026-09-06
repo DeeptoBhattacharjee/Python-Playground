@@ -1,0 +1,6 @@
+print("===Input===")
+fahr=float(input("Enter the Temperature in Fahrenheit : "))
+cent=(fahr-32)*(5/9)
+print("===Output===")
+print("Temperature in Fahrenheit :",fahr)
+print("Temperature in Centigrade :",cent)
