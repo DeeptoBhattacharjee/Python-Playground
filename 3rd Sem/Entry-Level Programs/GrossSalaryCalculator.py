@@ -9,4 +9,6 @@ else:
     da=0.98*basic
 gross=basic+hra+da
 print("Basic Salary = Rs.",basic)
+print("House Rent Allowance = Rs.",hra)
+print("Dearness Allowance = Rs.",da)
 print("Gross Salary = Rs.",gross)
