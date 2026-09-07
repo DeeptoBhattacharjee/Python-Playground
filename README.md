@@ -8,6 +8,25 @@ The Codes in Python Programming required for the understanding the Entry Level P
 |---|---|---|
 |1.|Odd Even Check|[View](#1-odd-even-checker)|
 |2.|Divisibility of a Number|[View](#2-divisibility-of-a-number)|
+|3.|Triangle Checker|[View](#3-triangle-checker)|
+|4.|Leap Year Checker|[View](#4-leap-year-checker)|
+|5.|Smallest Number of Three|[View](#5-smallest-number-of-three)|
+|6.|Gross Salary Calculator|[View](#6-gross-salary-calculator)|
+|7.|Students Result Division|[View](#7-students-result-division)|
+|8.|Month Finder|[View](#8-month-finder)|
+|9.|First 10 Natural Numbers|[View](#9-first-10-natural-numbers)|
+|10.|Multiplication Table|[View](#10-multiplication-table-of-a-number)|
+|11.|Factorial Number|[View](#11-factorial-of-a-number)|
+|12.|Prime Checker|[View](#12-prime-checker)|
+|13.|Reverse of a Number|[View](#13-reverse-of-a-number)|
+|14.|Sum of a Digits|[View](#14-sum-of-a-digits)|
+|15.|Palindrome Number|[View](#15-palindrome-number)|
+|16.|Armstrong Number|[View](#16-armstrong-number)|
+|17.|Perfect Number|[View](#17-perfect-number)|
+|18.|HCF of Two Numbers|[View](#18-hcf-of-two-numbers)|
+|19.|Swap Variables|[View](#19-swap-variables)|
+|20.|Temperature Conversion|[View](#20-temperature-conversion)|
+|21.|Notes Accomodation|[View](#21-notes-accomodation)|
 
 ### 1. Odd Even Checker
 
@@ -20,7 +39,7 @@ The Codes in Python Programming required for the understanding the Entry Level P
 ===Input===
 Enter a Number : 5
 ===Output===
-5 is an Odd Number
+5 is an Odd Number#
 
 ===Input===
 Enter a Number : 2
@@ -241,7 +260,7 @@ Original Number : 38261
 Reverse Number : 16283
 ```
 
-### 14. Sum of a Number
+### 14. Sum of a Digits
 
 `Question` Write a program to print the sum of digits of a number.
 
