@@ -198,7 +198,7 @@ The First 10 Natural Number:-
 
 `Question` Print multiplication table from 1 to 10 of a given number.
 
-`Code` [Source Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Entry-Level%20Programs/NaturalsTill10.py)
+`Code` [Source Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Entry-Level%20Programs/MultiplicationTable.py)
 
 `Output`
 ```
