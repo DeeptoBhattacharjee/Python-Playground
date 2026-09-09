@@ -2,6 +2,13 @@
 
 The Codes in Python Programming required for the understanding the Entry Level Programs to Python Models and Libraries in Machine Learning I did as a part of my Undergraduate course in Bachelors of Computer Application.
 
+## Topics Covered
+
+|S.No.|Title|Description|
+|---|---|---|
+|1.|Entry-Level Programs|[View](#entry-level-programs)|
+|2.|Feature Engineering|[View](#feature-engineering)|
+
 ## Entry-Level Programs
 
 |S.No.|Title|Description|
@@ -399,5 +406,133 @@ Enter the amount : 4479
 Minimum No. of Notes : 15
 ```
 
-  
+## Feature Engineering
 
+|S.No.|Title|Description|
+|---|---|---|
+|1.|Handling Missing Data|[View](#1-handling-missing-data)|
+|1(a)|Creating a Dataset|[View](#1a-creating-a-dataset)|
+|1(b)|Counting the Null Element|[View](#1b-counting-the-null-element-column-wise)|
+|1(c)|Handling through Mean Replacement|[View](#1c-handling-through-mean-replacement)|
+|1(d)|Handling through Median Replacement|[View](#1d-handling-through-median-replacement)|
+|1(e)|Handling through Mode Replacement|[View](#1e-handling-through-mode-replacement)|
+|1(f)|Removing the Null Elements|[View](#1f-removing-the-null-elements)|
+
+### 1. Handling Missing Data
+
+#### 1(a). Creating a Dataset
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/CreatingDataset.py)  
+
+`Output`
+```
+===Original Dataset===
+    Name   Age  Gender
+0  Alice  23.0  Female
+1    Bob  21.0     NaN
+2    NaN  29.0    Male
+3  David   NaN    Male
+4   Emma  25.0  Female
+```
+
+#### 1(b). Counting the Null Element column wise
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/CountNull.py)  
+
+`Output`
+```
+The Null Count:-
+Name      1
+Age       1
+Gender    2
+dtype: int64
+```
+
+#### 1(c). Handling through Mean Replacement
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/MeanReplacement.py)  
+
+`Output`
+```
+===Original Dataset===
+    Name   Age  Gender  Weight
+0  Alice  23.0  Female    65.0
+1    Bob  21.0     NaN    58.0
+2    NaN  29.0    Male     NaN
+3  David   NaN    Male    63.0
+4   Emma  25.0  Female    59.0
+
+===Dataframe after Replacement===
+    Name   Age  Gender  Weight
+0  Alice  23.0  Female   65.00
+1    Bob  21.0     NaN   58.00
+2    NaN  29.0    Male   61.25
+3  David  24.5    Male   63.00
+4   Emma  25.0  Female   59.00
+```
+
+#### 1(d). Handling through Median Replacement
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/MedianReplacement.py)  
+
+`Output`
+```
+===Original Dataset===
+    Name   Age  Gender  Weight
+0  Alice  23.0  Female    65.0
+1    Bob  21.0     NaN    58.0
+2    NaN  29.0    Male     NaN
+3  David   NaN    Male    63.0
+4   Emma  25.0  Female    59.0
+
+===Dataframe after Replacement===
+    Name   Age  Gender  Weight
+0  Alice  23.0  Female    65.0
+1    Bob  21.0     NaN    58.0
+2    NaN  29.0    Male    61.0
+3  David  24.0    Male    63.0
+4   Emma  25.0  Female    59.0
+```
+
+#### 1(e). Handling through Mode Replacement
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/ModeReplacement.py)  
+
+`Output`
+```
+===Original Dataset===
+    Name  Age  Gender  Weight
+0  Alice   23  Female      65
+1    NaN   21     NaN      58
+2    Bob   29    Male      61
+3  David   21    Male      63
+4   Emma   25  Female      59
+
+===Dataframe after Replacement===
+    Name  Age  Gender  Weight
+0  Alice   23  Female      65
+1    NaN   21    Male      58
+2    Bob   29    Male      61
+3  David   21    Male      63
+4   Emma   25  Female      59
+```
+
+#### 1(f). Removing the Null Elements  
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/RemoveNull.py)  
+
+`Output`
+```
+===Original Dataset===
+    Name   Age  Gender
+0  Alice  23.0  Female
+1    Bob  21.0     NaN
+2    NaN  29.0    Male
+3  David   NaN    Male
+4   Emma  25.0  Female
+
+===Datatset after Removal===
+    Name   Age  Gender
+0  Alice  23.0  Female
+4   Emma  25.0  Female
+```
