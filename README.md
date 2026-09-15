@@ -417,6 +417,9 @@ Minimum No. of Notes : 15
 |1(d)|Handling through Median Replacement|[View](#1d-handling-through-median-replacement)|
 |1(e)|Handling through Mode Replacement|[View](#1e-handling-through-mode-replacement)|
 |1(f)|Removing the Null Elements|[View](#1f-removing-the-null-elements)|
+
+|S.No.|Title|Description|
+|---|---|---|
 |2.|Cleaning Data in Dataset|[View](#2-cleaning-data-in-dataset)|
 |2(a)|Fetching Invalid Data|[View](#2a-fetching-invalid-data)|
 |2(b)|Replace Invalid Data|[View](#2b-replace-invalid-data)|
