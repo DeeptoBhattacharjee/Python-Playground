@@ -92,7 +92,7 @@ The triangle is valid
 
 `Question` Write a program to check whether a year is leap year or not.
 
-`Code` [Source Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Entry-Level%20Programs/TriangleChecker.py)
+`Code` [Source Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Entry-Level%20Programs/LeapYearChecker.py)
 
 `Output`
 ```
