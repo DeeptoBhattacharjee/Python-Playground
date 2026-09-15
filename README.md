@@ -46,7 +46,7 @@ The Codes in Python Programming required for the understanding the Entry Level P
 ===Input===
 Enter a Number : 5
 ===Output===
-5 is an Odd Number#
+5 is an Odd Number
 
 ===Input===
 Enter a Number : 2
@@ -535,4 +535,120 @@ dtype: int64
     Name   Age  Gender
 0  Alice  23.0  Female
 4   Emma  25.0  Female
+```
+
+### 2. Cleaning Data in Dataset
+
+#### 2(a). Fetching Invalid Data
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/FetchInvalidData.py)  
+
+`Output`
+```
+===Original Dataset===
+           Name  Gender  Age
+0         ALice  Female   21
+1           Bob    Male   22
+2  Invalid Data    Male   25
+3         David    Male   23
+4          Emma  Female   24
+
+Invalid Data:
+            Name Gender  Age
+2  Invalid Data   Male   25
+```
+
+#### 2(b). Replace Invalid Data
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/ReplaceInvalidData.py)  
+
+`Output`
+```
+===Original Dataset===
+           Name  Gender  Age
+0         ALice  Female   21
+1           Bob    Male   22
+2  Invalid Data    Male   25
+3         David    Male   23
+4          Emma  Female   24
+
+===Dataset after Replacing===
+      Name  Gender  Age
+0    ALice  Female   21
+1      Bob    Male   22
+2  Charlie    Male   25
+3    David    Male   23
+4     Emma  Female   24
+```
+
+#### 2(c). Remove Invalid Data
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/RemoveInvalidData.py)  
+
+`Output`
+```
+===Original Dataset===
+           Name  Gender  Age
+0         ALice  Female   21
+1           Bob    Male   22
+2  Invalid Data    Male   25
+3         David    Male   23
+4          Emma  Female   24
+
+===Dataset after Removing===
+    Name  Gender  Age
+0  ALice  Female   21
+1    Bob    Male   22
+3  David    Male   23
+4   Emma  Female   24
+```
+
+#### 2(d). Add New Data to Dataset
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/AddNewData.py)  
+
+`Output`
+```
+===Original Dataset===
+           Name  Gender  Age
+0         ALice  Female   21
+1           Bob    Male   22
+2  Invalid Data    Male   25
+3         David    Male   23
+4          Emma  Female   24
+
+Invalid Data:
+            Name Gender  Age
+2  Invalid Data   Male   25
+
+===Dataset after Adding Row===
+    Name  Gender  Age
+0  ALice  Female   21
+1    Bob    Male   22
+3  David    Male   23
+4   Emma  Female   24
+2  Eliza  Female   26
+```
+
+#### 2(e). Sort Data Index in Dataset
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/SortIndex.py)  
+
+`Output`
+```
+===Dataset before Sorting===
+    Name  Gender  Age
+0  ALice  Female   21
+1    Bob    Male   22
+3  David    Male   23
+4   Emma  Female   24
+2  Eliza  Female   26
+
+===Dataset after Sorting===
+    Name  Gender  Age
+0  ALice  Female   21
+1    Bob    Male   22
+2  Eliza  Female   26
+3  David    Male   23
+4   Emma  Female   24
 ```
