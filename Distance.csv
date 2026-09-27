@@ -1,0 +1,11 @@
+Name,Gender,Distance(km),Time(min),Category
+Alex,Male,2,8,Good
+Emma,Female,3,10,Better
+Daphne,Female,4,12,Good
+Sophia,Female,5,15,Better
+Liam,Male,6,18,Good
+Olivia,Female,8,22,Better
+Noah,Male,10,28,Best
+Adam,Male,15,40,Best
+Ethan,Male,80,300,Best
+Mia,Female,250,1200,Best

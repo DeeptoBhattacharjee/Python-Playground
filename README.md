@@ -427,6 +427,21 @@ Minimum No. of Notes : 15
 |2(d)|Add New Data to Dataset|[View](#2d-add-new-data-to-dataset)|
 |2(e)|Sort Data Index in Dataset|[View](#2e-sort-data-index-in-dataset)|
 
+|S.No.|Title|Description|
+|---|---|---|
+|3.|Scaling using Min-Max and Standard Normalization|[View](#3-scaling-using-min-max-and-standard-normalization)|
+|3(a).|Min-Max Scaling (without library funstion)|[View](#3a-min-max-scaling-without-library-funstion)|
+|3(b).|Min-Max Scaling (via library funstion)|[View](#3b-min-max-scaling-via-library-funstion)|
+|3(c).|Standard Scaling|[View](#3c-standard-scaling)|
+
+|S.No.|Title|Description|
+|---|---|---|
+|4.|Log Transformation of Columns & One-Hot Encoding and Label Encoding|[View](#4-log-transformation-of-columns--one-hot-encoding-and-label-encoding)|
+|4(a).|Column Extraction in Dataset|[View](#4a-column-extraction-in-dataset)|
+|4(b).|Log Transformation of Skewed Column|[View](#4b-log-transformation-of-skewed-column)|
+|4(c).|One-Hot Encoding|[View](#4c-one-hot-encoding)|
+|4(d).|Label Encoding|[View](#4d-label-encoding)|
+
 ### 1. Handling Missing Data
 
 #### 1(a). Creating a Dataset
@@ -660,4 +675,175 @@ Invalid Data:
 2  Eliza  Female   26
 3  David    Male   23
 4   Emma  Female   24
+```
+
+### 3. Scaling using Min-Max and Standard Normalization
+
+#### 3(a). Min-Max Scaling (without library funstion)
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/MinMaxScaling1.py)  
+
+`Output`
+```
+===Original Dataset===
+   Age  Height  Weight Grade
+0   20     172      65     A
+1   21     183      70     B
+2   25     167      68     A
+3   23     181      67     A
+4   24     175      72     B
+
+===Normalized Dataset===
+   Age  Height    Weight Grade
+0   20  0.3125  0.000000     A
+1   21  1.0000  0.714286     B
+2   25  0.0000  0.428571     A
+3   23  0.8750  0.285714     A
+4   24  0.5000  1.000000     B
+```
+
+#### 3(b). Min-Max Scaling (via library funstion)
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/MinMaxScaling2.py)  
+
+`Output`
+```
+===Original Dataset===
+   Age  Height  Weight Grade
+0   20     172      65     A
+1   21     183      70     B
+2   25     167      68     A
+3   23     181      67     A
+4   24     175      72     B
+
+===Normalized Dataset===
+   Age  Height    Weight Grade
+0   20  0.3125  0.000000     A
+1   21  1.0000  0.714286     B
+2   25  0.0000  0.428571     A
+3   23  0.8750  0.285714     A
+4   24  0.5000  1.000000     B
+```
+
+#### 3(c). Standard Scaling 
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/StandardScaling.py)  
+
+`Output`
+```
+===Original Dataset===
+   Age  Height  Weight Grade
+0   20     172      65     A
+1   21     183      70     B
+2   25     167      68     A
+3   23     181      67     A
+4   24     175      72     B
+
+===Normalized Dataset===
+   Age    Height    Weight Grade
+0   20 -0.615227 -1.406930     A
+1   21  1.264634  0.662085     B
+2   25 -1.469710 -0.165521     A
+3   23  0.922841 -0.579324     A
+4   24 -0.102538  1.489691     B
+```
+
+### 4. Log Transformation of Columns & One-Hot Encoding and Label Encoding
+
+#### 4(a). Column Extraction in Dataset
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/ExtractColumns.py)  
+
+`Output`
+```
+===Original Dataset===
+      Name  Gender  Distance(km)  Time(min) Category
+0    Alex    Male             2          8     Good
+1    Emma  Female             3         10   Better
+2  Daphne  Female             4         12     Good
+3  Sophia  Female             5         15   Better
+4    Liam    Male             6         18     Good
+5  Olivia  Female             8         22   Better
+6    Noah    Male            10         28     Best
+7    Adam    Male            15         40     Best
+8   Ethan    Male            80        300     Best
+9     Mia  Female           250       1200     Best
+
+===Extracted Columns Preview===
+   Distance(km)
+0             2
+1             3
+2             4
+3             5
+4             6
+5             8
+6            10
+7            15
+8            80
+9           250
+```
+
+`Histogram`
+
+![Column](<Png Files\Column Extraction.png>)
+
+#### 4(b). Log Transformation of Skewed Column
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/LogTransformation.py)  
+
+`Output`
+```
+   Distance(km)  Distance_Log
+0             2      0.693147
+1             3      1.098612
+2             4      1.386294
+3             5      1.609438
+4             6      1.791759
+5             8      2.079442
+6            10      2.302585
+7            15      2.708050
+8            80      4.382027
+9           250      5.521461
+```
+
+`Histogram`
+
+![Column](<Png Files\Log Transformed.png>)
+
+#### 4(c). One-Hot Encoding
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/One-HotEncoding.py)  
+
+`Output`
+```
+     Name  Distance(km)  Time(min)  Category_Best  Category_Better  Category_Good  Gender_Female  Gender_Male
+0    Alex             2          8              0                0              1              0            1
+1    Emma             3         10              0                1              0              1            0
+2  Daphne             4         12              0                0              1              1            0
+3  Sophia             5         15              0                1              0              1            0
+4    Liam             6         18              0                0              1              0            1
+5  Olivia             8         22              0                1              0              1            0
+6    Noah            10         28              1                0              0              0            1
+7    Adam            15         40              1                0              0              0            1
+8   Ethan            80        300              1                0              0              0            1
+9     Mia           250       1200              1                0              0              1            0
+```
+
+#### 4(d). Label Encoding
+
+`Code` [View Code](https://github.com/DeeptoBhattacharjee/Python-Playground/blob/main/3rd%20Sem/Feature-Engineering/LabelEncoding.py)  
+
+`Output`
+```
+     Name  Gender  Distance(km)  Time(min)  Category
+0    Alex       1             2          8         2
+1    Emma       0             3         10         1
+2  Daphne       0             4         12         2
+3  Sophia       0             5         15         1
+4    Liam       1             6         18         2
+5  Olivia       0             8         22         1
+6    Noah       1            10         28         0
+7    Adam       1            15         40         0
+8   Ethan       1            80        300         0
+9     Mia       0           250       1200         0
 ```
