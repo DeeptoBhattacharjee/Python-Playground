@@ -808,7 +808,7 @@ Invalid Data:
 
 `Histogram`
 
-![Column](<Png Files\Log Transformed.png>)
+![Log](<Png Files\Log Transformed.png>)
 
 #### 4(c). One-Hot Encoding
 
