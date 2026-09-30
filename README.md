@@ -785,7 +785,7 @@ Invalid Data:
 
 `Histogram`
 
-![Column](<Png Files\Column Extraction.png>)
+![alt text](<Png_Files/Column Extraction.png>)
 
 #### 4(b). Log Transformation of Skewed Column
 
@@ -808,7 +808,7 @@ Invalid Data:
 
 `Histogram`
 
-![Log](<Png Files\Log Transformed.png>)
+![Log](<Png_Files/Log Transformed.png>)
 
 #### 4(c). One-Hot Encoding
 
